@@ -1,0 +1,51 @@
+<template name="sidePanel">
+    <div class="container" id="side-panel">
+        <div class="row" id="side-panel-title">
+            <div class="logo-container">
+                <a href="/"><img class="logo center-block" src="logo.svg"></a>
+            </div>
+        </div>
+        <hr/>
+        {{#if currentAbstract}}
+            {{> abstractInfo abstract=currentAbstract}}
+        {{else}}
+        <div class="row">
+            <form class="navbar-form search-abstract" autocomplete="off">
+                <div class="col-md-12 input-group add-on">
+                    <input name="text" id="search-term" type="text" class="form-control" placeholder="Search abstract...">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr/>
+        {{#unless filterEnabled}}
+            <strong>You may be interested in:</strong>
+        {{/unless}}
+            {{#each filteredAbstracts}}
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="search-title text-left"><h5>{{title}}</h5></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p><em>
+                    {{#each authors}}
+                        {{#if presenter}}
+                            {{firstName}} {{middleName}} {{lastName}}
+                        {{/if}}
+                    {{/each}}
+                    {{etAll authors}}
+                    </em></p>
+                </div>
+            </div>
+            <hr/>
+            {{/each}}
+        {{/if}}
+    </div>
+    <div id=landscape-notification>
+        <p class="bg-warning">Please use landscape mode!</p>
+    </div>
+</template>

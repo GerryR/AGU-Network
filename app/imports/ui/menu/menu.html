@@ -1,0 +1,23 @@
+<template name="menu">
+    <body>
+        <div class="jumbotron">
+            <img class="logo center-block" src="logo.svg">
+        </div>
+        <div class="container">
+            <p>Select one program:</p>
+            <div class="list-group">
+            {{#each programs}}
+                <a href="#" class="program-item list-group-item text-center" name={{programId}}><h4>{{title}}</h4></a>
+            {{/each}}
+            </div>
+        </div>
+        <footer class="custom-footer">
+            <div>
+                <p class="footer-text text-center">
+                    Developed by <em>Calogero B. Rizzo</em> for the
+                    <a class="footer-link" href='https://developer.agu.org/'>AGU Open API Challenge</a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</template>

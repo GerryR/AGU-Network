@@ -1,0 +1,20 @@
+<template name="abstractInfo">
+    <div class="row">
+        <h3 class="col-md-12">{{abstract.title}}</h3>
+    </div>
+    <div class="row">
+        <ul class="col-md-12 list-unstyled">
+            {{#each abstract.authors}}
+                {{#if presenter}}
+                    <li><em><strong>{{firstName}} {{middleName}} {{lastName}}</strong></em></li>
+                {{else}}
+                    <li><em>{{firstName}} {{middleName}} {{lastName}}</em></li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    <hr/>
+    <div class="row">
+        <p class="col-md-12">{{abstract.text}}</p>
+    </div>
+</template>

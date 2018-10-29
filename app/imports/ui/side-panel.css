@@ -1,0 +1,49 @@
+#side-panel {
+    margin-top: 1%;
+    margin-left: 1%;
+    height: 96%;
+    background:#fff;
+    background-color:rgba(255,255,255,0.9);
+    border:1px solid #ccc;
+    z-index:20;
+    position:fixed;
+    overflow-y: scroll;
+    top:0;
+    max-width: 25%;
+}
+
+#landscape-notification {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    visibility: hidden;
+}
+
+@media screen and (max-device-width: 1000px) and (orientation:portrait){
+    #side-panel {
+        visibility: hidden;
+    }
+
+    #landscape-notification {
+        visibility: visible !important;
+    }
+}
+
+@media screen and (max-device-width: 1000px) and (orientation:landscape){
+    #side-panel {
+        max-width: 33%;
+    }
+}
+
+.search-title {
+    background: none;
+    border: none;
+    padding-left: 0;
+}
+
+.logo-container {
+    background-color: #364d66;
+    padding: 5%;
+}

@@ -1,0 +1,20 @@
+.logo {
+    width: 40%;
+}
+
+.jumbotron {
+    background-color: #364d66;
+}
+
+.custom-footer {
+    background-color: #364d66;
+    padding: 2em;
+}
+
+.footer-text {
+    color: #ffffff;
+}
+
+.footer-link:link, .footer-link:visited, .footer-link:hover, .footer-link:active {
+    color: #C0C0C0;
+}
